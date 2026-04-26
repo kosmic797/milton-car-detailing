@@ -7,259 +7,213 @@
 
 /* GLOBAL */
 body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #111;
+    font-family: "Inter", sans-serif;
     background: #fff;
-    scroll-behavior: smooth;
+    color: #111;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-/* NAVBAR (GLASS EFFECT) */
+/* NAVBAR */
 .navbar {
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
+    height: 70px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 15px 40px;
+    padding: 0 40px;
 
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
     z-index: 1000;
-}
-
-.navbar a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    opacity: 0.7;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .logo img {
-    height: 45px;
-    width: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* NAV LINKS */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.7;
 }
 
 /* HERO */
 .hero {
     height: 100vh;
-    background: url('your-car-image.jpg') center/cover no-repeat;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 0 40px;
+    background: #111;
     color: white;
-    position: relative;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
+.hero-inner {
+    max-width: 700px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
+.hero-text-box h1 {
+    font-size: 2.8rem;
+    margin: 10px 0;
 }
 
-.hero h1 {
-    font-size: 3rem;
-}
-
-.hero p {
+.hero-description {
     margin-top: 10px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-/* BUTTON */
+.eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+/* BUTTONS */
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 25px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.primary-btn {
     background: white;
     color: black;
-    text-decoration: none;
-    transition: 0.3s;
-    border-radius: 10px;
-    font-weight: 600;
 }
 
-.btn:hover {
-    background: #ddd;
-    transform: scale(1.05);
-}
-
-/* VALUE STRIP */
-.value-strip {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px;
-    background: #111;
+.outline-btn {
+    border: 1px solid white;
     color: white;
-    font-weight: 500;
+    margin-left: 10px;
 }
 
 /* SECTIONS */
 .section {
-    padding: 100px 20px;
-    text-align: center;
+    padding: 100px 40px;
 }
 
-.dark {
-    background: #111;
-    color: white;
-}
-
-h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
-    opacity: 0.85;
+.section-heading {
+    margin-bottom: 40px;
 }
 
 /* CARDS */
 .cards {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .card {
-    padding: 30px;
-    border: 1px solid #ddd;
-    width: 250px;
-    border-radius: 18px;
-    background: white;
-
-    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+    padding: 25px;
+    border-radius: 14px;
+    background: #f7f7f7;
 }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* PARALLAX */
-.parallax {
-    height: 300px;
-    background: url('https://source.unsplash.com/1600x900/?car,shine') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.featured-card {
+    background: #111;
     color: white;
-    font-size: 2rem;
-    position: relative;
-    overflow: hidden;
 }
 
-.parallax::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
+/* ABOUT */
+.about-section {
+    padding: 80px 40px;
 }
 
-.parallax h2 {
-    position: relative;
-    z-index: 1;
-}
+.about-card {
+    max-width: 1000px;
+    margin: auto;
+    background: #111;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
 
-/* VIDEO GALLERY */
-.video-cards {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
-    margin-top: 30px;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.about-right {
+    flex: 2;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* VIDEO GRID FIX (IMPORTANT) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .video-card {
-    width: 300px;
-    border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.video-card:hover {
-    transform: translateY(-5px);
+    background: black;
 }
 
 .video-card video {
     width: 100%;
-    display: block;
-}
-
-/* BEFORE & AFTER */
-.ba-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.ba-item {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.ba-item img {
-    width: 220px;
-    height: 150px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* FORM */
-form {
+/* CONTACT */
+.contact-section form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: auto;
     gap: 10px;
+    max-width: 400px;
 }
 
 input, textarea {
     padding: 10px;
-    border: none;
-    border-radius: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.contact-info {
+    margin-top: 20px;
 }
 
 /* FOOTER */
 footer {
     padding: 20px;
-    background: black;
-    color: white;
     text-align: center;
+    background: #111;
+    color: white;
 }

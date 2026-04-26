@@ -93,15 +93,28 @@ body {
     transform: translateY(-5px);
 }
 
-/* PARALLAX */
 .parallax {
     height: 300px;
-    background: url('https://source.unsplash.com/1600x900/?car,shine') center/cover fixed;
+    background: url('https://source.unsplash.com/1600x900/?car,shine') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.parallax h2 {
+    position: relative;
+    z-index: 1;
 }
 
 /* GALLERY */

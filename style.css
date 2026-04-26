@@ -7,47 +7,91 @@
 
 /* GLOBAL */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     color: #111;
     background: #fff;
+    scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* NAVBAR (GLASS EFFECT) */
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0,0,0,0.85);
-    color: white;
+
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    backdrop-filter: blur(10px);
     align-items: center;
 
+    padding: 15px 40px;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    z-index: 1000;
 }
 
 .navbar a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* HERO */
 .hero {
     height: 100vh;
-    background: url('https://source.unsplash.com/1600x900/?black-car') center/cover no-repeat;
+    background: url('your-car-image.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 3rem;
 }
 
+.hero p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -56,21 +100,47 @@ body {
     color: black;
     text-decoration: none;
     transition: 0.3s;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 .btn:hover {
     background: #ddd;
+    transform: scale(1.05);
 }
 
-/* SECTION */
+/* VALUE STRIP */
+.value-strip {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: #111;
+    color: white;
+    font-weight: 500;
+}
+
+/* SECTIONS */
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
 .dark {
     background: #111;
     color: white;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 /* CARDS */
@@ -86,13 +156,18 @@ body {
     padding: 30px;
     border: 1px solid #ddd;
     width: 250px;
-    transition: 0.3s;
+    border-radius: 18px;
+    background: white;
+
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+/* PARALLAX */
 .parallax {
     height: 300px;
     background: url('https://source.unsplash.com/1600x900/?car,shine') center/cover no-repeat;
@@ -117,43 +192,7 @@ body {
     z-index: 1;
 }
 
-/* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.gallery img {
-    width: 100%;
-}
-
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    gap: 10px;
-}
-
-input, textarea {
-    padding: 10px;
-    border: none;
-}
-
-footer {
-    padding: 20px;
-    background: black;
-    color: white;
-    text-align: center;
-}
-.logo img {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+/* VIDEO GALLERY */
 .video-cards {
     display: flex;
     justify-content: center;
@@ -176,10 +215,51 @@ footer {
 
 .video-card video {
     width: 100%;
-    height: 100%;
     display: block;
 }
 
-.card {
-    border-radius: 15px;
+/* BEFORE & AFTER */
+.ba-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ba-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ba-item img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: black;
+    color: white;
+    text-align: center;
 }

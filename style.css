@@ -154,3 +154,32 @@ footer {
     border-radius: 50%;
     object-fit: cover;
 }
+.video-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.video-card {
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-card video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.card {
+    border-radius: 15px;
+}

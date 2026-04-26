@@ -23,6 +23,8 @@ body {
     justify-content: space-between;
     padding: 15px 40px;
     backdrop-filter: blur(10px);
+    align-items: center;
+
 }
 
 .navbar a {

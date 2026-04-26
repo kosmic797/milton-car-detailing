@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Milton Car Detailing</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Milton Car Detailing offers clean, affordable, and professional interior and exterior car detailing services in Milton." />
+  <title>Milton Car Detailing</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
 <header class="navbar">
-  <a href="#home" class="logo">
+  <a href="#home" class="logo" aria-label="Milton Car Detailing Home">
     <img src="logo.jpg" alt="Milton Car Detailing Logo" />
     <span>Milton Car Detailing</span>
   </a>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
@@ -27,88 +29,103 @@
   </nav>
 </header>
 
-<section id="home" class="hero">
-  <div class="hero-content">
-    <p class="hero-tag">Milton’s Local Detailing Team</p>
-    <h1>Clean Cars. Sharp Finish. Professional Results.</h1>
-    <p class="hero-text">Interior and exterior detailing made simple, clean, and affordable.</p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn primary-btn">Book Now</a>
-      <a href="#services" class="btn secondary-btn">View Services</a>
+<main>
+
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text-box">
+        <div class="eyebrow">Local Milton Car Detailing</div>
+        <h1>Professional Detailing That Makes Your Car Look New Again.</h1>
+        <div class="hero-description">
+          Interior cleaning, exterior washes, and full details done with care, precision, and a clean finish.
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary-btn">Book Now</a>
+          <a href="#services" class="btn outline-btn">View Services</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="services" class="section">
-  <p class="section-label">What We Offer</p>
-  <h2>Our Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Interior Detail</h3>
-      <p>Deep cleaning of seats, carpets, mats, panels, and dashboard areas.</p>
-      <span>$50</span>
-    </div>
-
-    <div class="card featured-card">
-      <h3>Full Detail</h3>
-      <p>Complete interior and exterior clean for the best overall result.</p>
-      <span>$80</span>
+  <section id="services" class="section">
+    <div class="section-heading">
+      <div class="eyebrow">Services</div>
+      <h2>Simple Packages. Clean Results.</h2>
     </div>
 
-    <div class="card">
-      <h3>Exterior Wash</h3>
-      <p>Hand wash, wheel cleaning, shine finish, and clean exterior look.</p>
-      <span>$35</span>
+    <div class="cards">
+      <div class="card">
+        <h3>Interior Detail</h3>
+        <div class="card-text">Deep clean of seats, carpets, mats, panels, and dashboard areas.</div>
+        <strong>$50</strong>
+      </div>
+
+      <div class="card featured-card">
+        <h3>Full Detail</h3>
+        <div class="card-text">Complete interior and exterior detail for the best overall result.</div>
+        <strong>$80</strong>
+      </div>
+
+      <div class="card">
+        <h3>Exterior Wash</h3>
+        <div class="card-text">Hand wash, wheel cleaning, and a sharp shine finish.</div>
+        <strong>$35</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="about-section">
-  <div class="about-card">
-    <div>
-      <p class="section-label">About Us</p>
-      <h2>Built on Passion, Detail, and Trust.</h2>
+  <section id="about" class="about-section">
+    <div class="about-card">
+      <div class="about-left">
+        <div class="eyebrow">About Us</div>
+        <h2>Local, Careful, and Detail-Focused.</h2>
+      </div>
+
+      <div class="about-right">
+        Milton Car Detailing is a local business built on passion, precision, and pride in every vehicle we work on. We focus on clean results, honest service, and the small details that make a big difference. Whether it is a quick exterior wash or a full detail, our goal is to leave your car looking sharp, fresh, and professionally finished.
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section work-section">
+    <div class="section-heading">
+      <div class="eyebrow">Our Work</div>
+      <h2>Recent Details</h2>
     </div>
 
-    <p>
-      Milton Car Detailing is a local business focused on giving every vehicle a cleaner, sharper, and more professional finish. We are passionate about cars and take pride in doing the small details right. Whether it is a quick exterior wash or a full detail, our goal is to make your car look its best with honest service, careful work, and results you can trust.
-    </p>
-  </div>
-</section>
+    <div class="video-grid">
+      <div class="video-card"><video src="AcuraLogo.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="video-card"><video src="AcuraHeadlights.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="video-card"><video src="AcuraFront.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="video-card"><video src="AcuraBack.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="video-card"><video src="AcuraTail.mp4" controls preload="metadata" playsinline></video></div>
+    </div>
+  </section>
 
-<section id="gallery" class="section work-section">
-  <p class="section-label">Results</p>
-  <h2>Our Work</h2>
+  <section id="contact" class="section contact-section">
+    <div class="section-heading">
+      <div class="eyebrow">Contact</div>
+      <h2>Book Your Detail</h2>
+    </div>
 
-  <div class="video-cards">
-    <div class="video-card"><video src="AcuraLogo.mp4" controls></video></div>
-    <div class="video-card"><video src="AcuraHeadlights.mp4" controls></video></div>
-    <div class="video-card"><video src="AcuraFront.mp4" controls></video></div>
-    <div class="video-card"><video src="AcuraBack.mp4" controls></video></div>
-    <div class="video-card"><video src="AcuraTail.mp4" controls></video></div>
-  </div>
-</section>
+    <form action="https://formspree.io/f/xbdqwarj" method="POST">
+      <input type="text" name="name" placeholder="Your Name" maxlength="60" autocomplete="name" required />
+      <input type="email" name="email" placeholder="Your Email" maxlength="100" autocomplete="email" required />
+      <textarea name="message" placeholder="Your Message" maxlength="500" required></textarea>
+      <button type="submit" class="btn primary-btn">Send Message</button>
+    </form>
 
-<section id="contact" class="section contact-section">
-  <p class="section-label">Get In Touch</p>
-  <h2>Book Your Detail</h2>
+    <div class="contact-info">
+      <div>Phone: (437) 667-9347</div>
+      <div>Email: saicharansuvarna09.com</div>
+    </div>
+  </section>
 
-  <form action="https://formspree.io/f/xbdqwarj" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn primary-btn">Send Message</button>
-  </form>
-
-  <div class="contact-info">
-    <p>Phone: (437) 667-9347</p>
-    <p>Email: saicharansuvarna09.com</p>
-  </div>
-</section>
+</main>
 
 <footer>
-  <p>© 2026 Milton Car Detailing. All rights reserved.</p>
+  <div>© 2026 Milton Car Detailing. All rights reserved.</div>
 </footer>
 
 <script src="script.js"></script>

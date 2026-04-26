@@ -134,6 +134,8 @@ footer {
     text-align: center;
 }
 .logo img {
-    height: 100px;
-    width: auto;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
 }

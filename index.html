@@ -110,7 +110,14 @@
 
     <form action="https://formspree.io/f/xbdqwarj" method="POST">
       <input type="text" name="name" placeholder="Your Name" maxlength="60" autocomplete="name" required />
-      <input type="email" name="email" placeholder="Your Email" maxlength="100" autocomplete="email" required />
+      <input 
+  type="tel" 
+  name="phone" 
+  placeholder="Your Phone Number" 
+  pattern="[0-9]{10}" 
+  maxlength="10"
+  required 
+/>
       <textarea name="message" placeholder="Your Message" maxlength="500" required></textarea>
       <button type="submit" class="btn primary-btn">Send Message</button>
     </form>
